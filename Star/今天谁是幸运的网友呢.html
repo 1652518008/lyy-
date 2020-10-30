@@ -1,0 +1,25 @@
+<head>
+  <title>幸运抽签</title>
+  <link href="StarAd.css" type="text/css" rel="stylesheet" />
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    document.body.onclick = create_star;
+    function create_star(event) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.left = event.clientX - 13;
+      star.style.top = event.clientY - 13;
+      document.body.append(star);
+      setTimeout(() => {
+        star.remove();
+      }, 980);
+    }
+  </script>
+</body>
